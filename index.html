@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nishant Kamble - Web Developer & Digital Marketing Specialist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --background: oklch(1 0 0);
+            --foreground: oklch(0.35 0.08 200);
+            --card: oklch(0.98 0.02 200);
+            --card-foreground: oklch(0.45 0.02 220);
+            --primary: oklch(0.35 0.08 200);
+            --primary-foreground: oklch(1 0 0);
+            --secondary: oklch(0.55 0.15 260);
+            --secondary-foreground: oklch(1 0 0);
+            --muted: oklch(0.98 0.01 220);
+            --muted-foreground: oklch(0.5 0.02 220);
+            --accent: oklch(0.55 0.15 260);
+            --accent-foreground: oklch(1 0 0);
+            --border: oklch(0.85 0.01 220);
+            --radius: 0.5rem;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .bg-background { background-color: var(--background); }
+        .text-foreground { color: var(--foreground); }
+        .bg-card { background-color: var(--card); }
+        .text-card-foreground { color: var(--card-foreground); }
+        .bg-primary { background-color: var(--primary); }
+        .text-primary-foreground { color: var(--primary-foreground); }
+        .bg-secondary { background-color: var(--secondary); }
+        .text-secondary-foreground { color: var(--secondary-foreground); }
+        .bg-muted { background-color: var(--muted); }
+        .text-muted-foreground { color: var(--muted-foreground); }
+        .border-border { border-color: var(--border); }
+        
+        .mobile-nav {
+            transform: translateY(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .mobile-nav.active {
+            transform: translateY(0);
+        }
+        
+        .project-card {
+            transition: transform 0.2s ease-in-out;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-4px);
+        }
+        
+        .skill-tag {
+            transition: all 0.2s ease-in-out;
+        }
+        
+        .skill-tag:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-background text-foreground">
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center px-4 py-20">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="mb-8">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 text-balance">
+                    Hi, I'm <span class="text-primary">Nishant Kamble</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-muted-foreground mb-8 text-pretty">
+                    Web Developer & Digital Marketing Specialist crafting exceptional digital experiences
+                </p>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://shorturl.at/9IqDS" target="_blank" rel="noopener noreferrer" 
+                   class="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity">
+                    View My Work
+                </a>
+                <a href="tel:+918291465231" 
+                   class="border border-border px-8 py-3 rounded-lg font-medium hover:bg-muted transition-colors">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Featured Projects</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Goli Vada Pav -->
+                <div class="project-card bg-card rounded-lg overflow-hidden shadow-lg">
+                    <img src="goli-vada-pav-thumbnail.png" alt="Goli Vada Pav" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Goli Vada Pav</h3>
+                        <p class="text-muted-foreground mb-4">Food franchise website with franchise management system</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag bg-muted text-muted-foreground px-3 py-1 rounded-full text-sm">WordPress</span>
+                            <span class="skill-tag bg-muted text-muted-foreground px-3 py-1 rounded-full text-sm">E-commerce</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stay Leisurely -->
+                <div class="project-card bg-card rounded-lg overflow-hidden shadow-lg">
+                    <img src="leisurely-thumbnail.png" alt="Stay Leisurely" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Stay Leisurely</h3>
+                        <p class="text-muted-foreground mb-4">Vacation rental platform with booking system</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag bg-muted text-muted-foreground px-3 py-1 rounded-full text-sm">React</span>
+                            <span class="skill-tag bg-muted text-muted-foreground px-3 py-1 rounded-full text-sm">Booking System</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wishtel -->
+                <div class="project-card bg-card rounded-lg overflow-hidden shadow-lg">
+                    <img src="wishtel-thumbnail.png" alt="Wishtel" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Wishtel</h3>
+                        <p class="text-muted-foreground mb-4">Technology company website with product showcase</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag bg-muted text-muted-foreground px-3 py-1 rounded-full text-sm">Next.js</span>
+                            <span class="skill-tag bg-muted text-muted-foreground px-3 py-1 rounded-full text-sm">Product Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lakkadhaara -->
+                <div class="project-card bg-card rounded-lg overflow-hidden shadow-lg">
+                    <img src="lakkadhaara-thumbnail.png" alt="Lakkadhaara" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Lakkadhaara</h3>
+                        <p class="text-muted-foreground mb-4">Luxury furniture e-commerce platform</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag bg-muted text-muted-foreground px-3 py-1 rounded-full text-sm">Shopify</span>
+                            <span class="skill-tag bg-muted text-muted-foreground px-3 py-1 rounded-full text-sm">Luxury Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IZI Cart -->
+                <div class="project-card bg-card rounded-lg overflow-hidden shadow-lg">
+                    <img src="izi-cart-thumbnail.png" alt="IZI Cart" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">IZI Cart</h3>
+                        <p class="text-muted-foreground mb-4">Drone technology e-commerce platform</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag bg-muted text-muted-foreground px-3 py-1 rounded-full text-sm">E-commerce</span>
+                            <span class="skill-tag bg-muted text-muted-foreground px-3 py-1 rounded-full text-sm">Tech Products</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Offstream -->
+                <div class="project-card bg-card rounded-lg overflow-hidden shadow-lg">
+                    <img src="offstream-thumbnail.png" alt="Offstream" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Offstream</h3>
+                        <p class="text-muted-foreground mb-4">Industrial operations management platform</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag bg-muted text-muted-foreground px-3 py-1 rounded-full text-sm">Corporate</span>
+                            <span class="skill-tag bg-muted text-muted-foreground px-3 py-1 rounded-full text-sm">Industrial</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-4 bg-muted">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Professional Experience</h2>
+            
+            <div class="space-y-8">
+                <div class="bg-background rounded-lg p-6 shadow-lg">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <h3 class="text-xl font-semibold">Web Developer & Digital Marketing Specialist</h3>
+                        <span class="text-muted-foreground">2020 - Present</span>
+                    </div>
+                    <p class="text-muted-foreground mb-4">Freelance</p>
+                    <ul class="list-disc list-inside text-muted-foreground space-y-2">
+                        <li>Developed and maintained 15+ client websites across various industries</li>
+                        <li>Implemented SEO strategies resulting in 40% average traffic increase</li>
+                        <li>Managed social media campaigns with 25% engagement improvement</li>
+                        <li>Specialized in e-commerce solutions and booking systems</li>
+                    </ul>
+                </div>
+
+                <div class="bg-background rounded-lg p-6 shadow-lg">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <h3 class="text-xl font-semibold">Digital Marketing Executive</h3>
+                        <span class="text-muted-foreground">2019 - 2020</span>
+                    </div>
+                    <p class="text-muted-foreground mb-4">Various Companies</p>
+                    <ul class="list-disc list-inside text-muted-foreground space-y-2">
+                        <li>Executed comprehensive digital marketing campaigns</li>
+                        <li>Managed PPC advertising with improved ROI</li>
+                        <li>Created content strategies for multiple brands</li>
+                        <li>Analyzed campaign performance and optimized strategies</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Skills & Technologies</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-6">Web Development</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-tag bg-primary text-primary-foreground px-4 py-2 rounded-full">HTML/CSS</span>
+                        <span class="skill-tag bg-primary text-primary-foreground px-4 py-2 rounded-full">JavaScript</span>
+                        <span class="skill-tag bg-primary text-primary-foreground px-4 py-2 rounded-full">React</span>
+                        <span class="skill-tag bg-primary text-primary-foreground px-4 py-2 rounded-full">Next.js</span>
+                        <span class="skill-tag bg-primary text-primary-foreground px-4 py-2 rounded-full">WordPress</span>
+                        <span class="skill-tag bg-primary text-primary-foreground px-4 py-2 rounded-full">Shopify</span>
+                        <span class="skill-tag bg-primary text-primary-foreground px-4 py-2 rounded-full">PHP</span>
+                        <span class="skill-tag bg-primary text-primary-foreground px-4 py-2 rounded-full">MySQL</span>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-6">Digital Marketing</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-tag bg-secondary text-secondary-foreground px-4 py-2 rounded-full">SEO</span>
+                        <span class="skill-tag bg-secondary text-secondary-foreground px-4 py-2 rounded-full">Google Ads</span>
+                        <span class="skill-tag bg-secondary text-secondary-foreground px-4 py-2 rounded-full">Facebook Ads</span>
+                        <span class="skill-tag bg-secondary text-secondary-foreground px-4 py-2 rounded-full">Social Media</span>
+                        <span class="skill-tag bg-secondary text-secondary-foreground px-4 py-2 rounded-full">Content Marketing</span>
+                        <span class="skill-tag bg-secondary text-secondary-foreground px-4 py-2 rounded-full">Email Marketing</span>
+                        <span class="skill-tag bg-secondary text-secondary-foreground px-4 py-2 rounded-full">Analytics</span>
+                        <span class="skill-tag bg-secondary text-secondary-foreground px-4 py-2 rounded-full">PPC</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 bg-muted">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8">Let's Work Together</h2>
+            <p class="text-xl text-muted-foreground mb-12 text-pretty">
+                Ready to bring your digital vision to life? Let's discuss your project and create something amazing together.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-background rounded-lg p-6 shadow-lg">
+                    <i class="fas fa-envelope text-3xl text-primary mb-4"></i>
+                    <h3 class="text-lg font-semibold mb-2">Email</h3>
+                    <a href="mailto:dnishantk61@gmail.com" class="text-muted-foreground hover:text-primary transition-colors">
+                        dnishantk61@gmail.com
+                    </a>
+                </div>
+                
+                <div class="bg-background rounded-lg p-6 shadow-lg">
+                    <i class="fas fa-phone text-3xl text-primary mb-4"></i>
+                    <h3 class="text-lg font-semibold mb-2">Phone</h3>
+                    <a href="tel:+918291465231" class="text-muted-foreground hover:text-primary transition-colors">
+                        +91 82914 65231
+                    </a>
+                </div>
+                
+                <div class="bg-background rounded-lg p-6 shadow-lg">
+                    <i class="fas fa-map-marker-alt text-3xl text-primary mb-4"></i>
+                    <h3 class="text-lg font-semibold mb-2">Location</h3>
+                    <p class="text-muted-foreground">Thane, Maharashtra</p>
+                </div>
+            </div>
+            
+            <div class="bg-background rounded-lg p-8 shadow-lg">
+                <h3 class="text-2xl font-semibold mb-6">Start Your Project</h3>
+                <p class="text-muted-foreground mb-6">
+                    Ready to get started? Send me an email and let's discuss your project requirements.
+                </p>
+                <a href="mailto:dnishantk61@gmail.com?subject=Project Inquiry&body=Hi Nishant,%0D%0A%0D%0AI'm interested in discussing a project with you.%0D%0A%0D%0AProject details:%0D%0A%0D%0ABest regards," 
+                   class="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity inline-block">
+                    Send Message
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav fixed bottom-0 left-0 right-0 bg-background border-t border-border p-4 z-50">
+        <div class="flex justify-around items-center max-w-md mx-auto">
+            <a href="#hero" class="flex flex-col items-center text-muted-foreground hover:text-primary transition-colors">
+                <i class="fas fa-home text-xl mb-1"></i>
+                <span class="text-xs">Home</span>
+            </a>
+            <a href="#work" class="flex flex-col items-center text-muted-foreground hover:text-primary transition-colors">
+                <i class="fas fa-briefcase text-xl mb-1"></i>
+                <span class="text-xs">Work</span>
+            </a>
+            <a href="#experience" class="flex flex-col items-center text-muted-foreground hover:text-primary transition-colors">
+                <i class="fas fa-user text-xl mb-1"></i>
+                <span class="text-xs">Experience</span>
+            </a>
+            <a href="#skills" class="flex flex-col items-center text-muted-foreground hover:text-primary transition-colors">
+                <i class="fas fa-code text-xl mb-1"></i>
+                <span class="text-xs">Skills</span>
+            </a>
+            <a href="#contact" class="flex flex-col items-center text-muted-foreground hover:text-primary transition-colors">
+                <i class="fas fa-envelope text-xl mb-1"></i>
+                <span class="text-xs">Contact</span>
+            </a>
+        </div>
+    </nav>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Active navigation highlighting
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.mobile-nav a[href^="#"]');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-primary');
+                link.classList.add('text-muted-foreground');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.remove('text-muted-foreground');
+                    link.classList.add('text-primary');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
